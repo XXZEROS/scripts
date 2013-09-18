@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset2" value="name:katadi;datatype:string,name:katid;datatype:int" />
+	<infoitem key="UD_rsicerik" value="name:katid;datatype:int,name:baslik;datatype:int,name:ozet;datatype:int,name:icerik;datatype:int,name:yazar;datatype:int,name:tarih;datatype:int,name:arkaplan;datatype:int,name:slidegos;datatype:int,name:id;datatype:int" />
+</info>
