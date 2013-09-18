@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_gs" value="name:id;datatype:int,name:katid;datatype:int,name:baslik;datatype:string,name:ozet;datatype:string,name:icerik;datatype:string,name:yazar;datatype:string,name:tarih;datatype:string,name:arkaplan;datatype:string,name:slidegos;datatype:string,name:w;datatype:string" />
+	<infoitem key="UD_kat" value="name:id;datatype:int,name:katid;datatype:int,name:baslik;datatype:string,name:ozet;datatype:string,name:icerik;datatype:string,name:yazar;datatype:string,name:tarih;datatype:string,name:arkaplan;datatype:string,name:slidegos;datatype:string,name:w;datatype:string" />
+	<infoitem key="UD_kt" value="name:katid;datatype:int,name:katadi;datatype:string" />
+</info>

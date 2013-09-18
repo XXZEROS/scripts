@@ -1,0 +1,28 @@
+**
+** @package JW FlashCast
+** @version 1.0
+** @copyright JW Player (c) LongTail Video
+  http://www.longtailvideo.com/players/jw-flv-player/
+** @copyright Code (c) Basement Hole Productions 
+ http://www.basementhole.com
+** @license http://opensource.org/licenses/gpl-license.php 
+GNU Public License
+**
+
+The JW FlashCast is a player and script put together to stream shoutcast s
+treams through a flash player. It uses the JW Player for the front end and script by Basement Ho
+le Productions for the back end.  For support with the player and skinning the player check out 
+LongTail Videos site (listed above) for all other support you can check the release post on spacial
+ audios forums (http://support.spacialaudio.com/forums/viewtopic.php?f=20&t=30111) or email suppor
+t@basementhole.com.
+
+1. 
+
+player.js dosyasýný açýn
+2. radyoportu yazan yere kendi radyo portunuzu yazýn
+3. radyoipadresi yazan yere kendi radyo ipinizi yazýn
+4. radyoismi yazan yere kendi radyo isminizi yazýn örnegin: Kral FM gibi
+5. Dosyayý kaydedin
+6. Dosyalarý ftp nizde ayný dizine yükleyin
+7. index.php dosyasýndaki ornek kodu sitenizde ilgili yere ekleyin
+8. Bu kadar. Ýyi yayýnlar.

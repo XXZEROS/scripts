@@ -1,0 +1,516 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+
+}
+
+
+.footer{
+	top: 0;
+	height: 49px;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 100000;
+}
+
+a {
+	color: #F60;
+	text-decoration: none;
+}
+a:hover {
+	color: #900;
+}
+.sust {
+	height: 192px;
+	background-color: #F60;
+	background-image: url(images/ustark.jpg);
+}
+
+
+#menuust {
+	height:40px;
+	background-image:url(file:///D|/xampp/htdocs/gamze/css/menubg.gif);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bolder;
+	clear: left;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 7px;
+}
+
+#menuust ul {
+list-style-type:none;
+padding:0;
+margin:0;
+}
+
+#menuust li {
+	display:inline;
+	padding:0;
+	margin: 0;
+}
+
+
+#menuust li a {
+	text-decoration:none;
+	color:#626262;
+	float:left;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	padding-top: 12px;
+	padding-right: 10px;
+	padding-bottom: 12px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+#menuust li a:hover {
+	color:#000;
+	text-decoration:none;
+	float:left;
+}
+.logoo {
+	height: 120px;
+	width: 390px;
+	float: left;
+	margin-top: 70px;
+}
+.ustcuk {
+	width: 970px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.clear {
+	clear: both;
+}
+.sust-ort {
+	margin-right: auto;
+	margin-left: auto;
+	float: left;
+	margin-top: 101px;
+}
+.ortust {
+	background-image: url(images/altrak.jpg);
+	height: 154px;
+}
+.orta {
+	background-image: url(images/arkw.jpg);
+	padding-bottom: 17px;
+}
+.ortw {
+	width: 970px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.ortsol {
+	float: left;
+	width: 712px;
+	min-height: 500px;
+}
+.ortsag {
+	float: left;
+	width: 248px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+.yorum {
+	text-decoration: none;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.yorumust {
+	background-image: url(images/yorumust.jpg);
+	height: 20px;
+	width: 677px;
+	margin-left: 26px;
+}
+.yorumort {
+	background-image: url(images/yorumort.png);
+	margin-left: 1px;
+}
+.yorumsys {
+	height: 41px;
+	width: 53px;
+	float: left;
+	font-size: 25px;
+	color: #FFF;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	background-image: url(images/yorumsay.jpg);
+	padding-top: 7px;
+	margin-left: -1px;
+}
+.yorumsys2 {
+	height: 41px;
+	width: 53px;
+	float: left;
+	font-size: 25px;
+	color: #FFF;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	background-image: url(images/yorumsay2.jpg);
+	padding-top: 7px;
+	margin-left: -1px;
+}
+
+.yorumic {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 25px;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 5px;
+	max-width: 630px;
+}
+.yorumic a {
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #333;
+	text-decoration: none;
+}
+.yorumic a:hover {
+	color: #666;
+	text-decoration: none;
+}
+.yorumrumuz {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 13px;
+	color: #999;
+	text-decoration: none;
+	margin-top: 15px;
+	float: left;
+}
+.yorumalt {
+	background-image: url(images/yorumalt.jpg);
+	height: 40px;
+	width: 677px;
+	margin-left: 26px;
+}
+.enalt {
+	background-color: #F98813;
+	height: 20px;
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #333;
+	padding-top: 5px;
+	clear: both;
+}
+.enalt a {
+	color: #333;
+	text-decoration: none;
+}
+.yorum {
+	text-decoration: none;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.yorumust {
+	background-image: url(images/yorumust.jpg);
+	height: 20px;
+	width: 677px;
+	margin-left: 26px;
+}
+.yorumort {
+	background-image: url(images/yorumort.png);
+	width: 702px;
+	margin-left: 1px;
+}
+.yorumsys {
+	height: 41px;
+	width: 53px;
+	float: left;
+	font-size: 25px;
+	color: #FFF;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	background-image: url(images/yorumsay.jpg);
+	padding-top: 7px;
+}
+.yorumsys2 {
+	height: 41px;
+	width: 53px;
+	float: left;
+	font-size: 25px;
+	color: #FFF;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	background-image: url(images/yorumsay2.jpg);
+	padding-top: 7px;
+}
+
+.yorumic {
+	font-size: 25px;
+	color: #333;
+	text-decoration: none;
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 5px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+.yorumrumuz {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 13px;
+	color: #999;
+	text-decoration: none;
+	margin-top: 15px;
+	float: left;
+	margin-left: 40px;
+}
+.yorumalt {
+	background-image: url(images/yorumalt.jpg);
+	height: 39px;
+	width: 677px;
+	margin-left: 26px;
+}
+.yorumortciz {
+	background-image: url(images/ortacizgi.jpg);
+	height: 7px;
+	width: 678px;
+	margin-left: 25px;
+}
+.yoruruur1 {
+	margin-left: 50px;
+	padding-top: 10px;
+	margin-right: 15px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 13px;
+}
+.yoruruur {
+	margin-left: 50px;
+	padding-top: 10px;
+	margin-right: 15px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+}
+.yorw {
+	background-image: url(images/yorort.jpg);
+
+	width: 678px;
+	margin-left: 26px;
+	margin-top: 15px;
+}
+.yorsol {
+	width: 538px;
+	float: left;
+	padding-top: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.yoricalt {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-decoration: none;
+	padding-top: 3px;
+}
+.yoricus {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	color: #333;
+	text-decoration: none;
+}
+.yorres {
+	float: right;
+	height: 53px;
+	width: 53px;
+	margin-top: 15px;
+	margin-right: 15px;
+}
+.yorrsust {
+	background-image: url(images/yoratingsi.jpg);
+	height: 36px;
+	width: 55px;
+	margin-top: 20px;
+	margin-left: -22px;
+	float: left;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 22px;
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 11px;
+}
+.yorrsust2 {
+	background-image: url(images/yorating.jpg);
+	height: 36px;
+	width: 55px;
+	margin-top: 20px;
+	margin-left: -22px;
+	float: left;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 22px;
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 11px;
+}
+.yorrsust3 {
+	background-image: url(images/yorating3.jpg);
+	text-align:center;
+	height: 36px;
+	width: 55px;
+	margin-top: 20px;
+	margin-left: -22px;
+	float: left;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 22px;
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 11px;
+}
+.sll {
+	float: left;
+	width: 50px;
+	height: 40px;
+}
+.kris {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #666;
+	text-decoration: none;
+	padding-left: 10px;
+}
+.form {
+	background-color: #FFF;
+	width: 200px;
+	border: 1px dotted #666;
+}
+.sblokbas {
+	background-image: url(images/blokicust.jpg);
+	height: 11px;
+}
+.bttn {
+	margin-bottom: 5px;
+}
+.solblok {
+	background-image: url(images/blokicor.jpg);
+	width: 248px;
+	color: #333;
+	text-decoration: none;
+}
+.facebok {
+	background-color: #FFF;
+	margin-right: auto;
+	margin-left: auto;
+	width: 190px;
+}
+.blkbslk {
+	font-size: 15px;
+	color: #FF7800;
+	padding-top: 5px;
+	padding-left: 10px;
+	text-align: left;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #FF9800;
+	margin-right: 10px;
+	margin-left: 10px;
+	font-weight: bolder;
+	margin-bottom: 5px;
+	font-family: "Courier New", Courier, monospace;
+}
+.blokara {
+	background-image: url(images/blokinara.jpg);
+	height: 27px;
+	margin-top: 10px;
+	font-size: 22px;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+.bttns {
+	margin-right: 10px;
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.blokson {
+	background-image: url(images/blokicalt.jpg);
+	height: 24px;
+}
+.solaltblok {
+	background-color: #000;
+	width: 200px;
+}
+.rating {
+	padding-left: 15px;
+	color: #666;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	background-image: url(images/ratingark.jpg);
+	height: 31px;
+	width: 600px;
+	margin-left: 26px;
+}
+.sikim {
+	min-height: 140px;
+	width: 592px;
+}
+.tkvm {
+	margin-right: 10px;
+	margin-left: 15px;
+	margin-top: -35px;
+	margin-bottom: 5px;
+}
+.malt {
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+	height: 40px;
+	font-size: 20px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #666;
+}
+
+.dikkat{
+	border:solid 1px #DEDEDE;
+	background:#FFFFCC url(images/icon-alert-icon.png) 8px 6px no-repeat;
+	color:#222222;
+	font-weight:bold;
+	padding:4px;
+	text-align:center;
+	width: 665px;
+	margin-left: 26px;
+    } 
+    .onay{
+	border:solid 1px #90ac13;
+	background:#eef4d3 url(images/accept-icon.png) 8px 6px no-repeat;
+	color:#6b800d;
+	font-weight:bold;
+	padding:4px;
+	text-align:center;
+	width: 665px;
+	margin-left: 26px;
+    } 
+    .yasak{
+	border:solid 1px #CC0000;
+	background:#F7CBCA url(images/delete-icon.png) 8px 6px no-repeat;
+	color:#CC0000;
+	font-weight:bold;
+	padding:4px;
+	text-align:center;
+	width: 665px;
+	margin-left: 26px;
+    }
+#gonder {
+	height: 60px;
+}
+.cvv {
+	font-size: 12px;
+}

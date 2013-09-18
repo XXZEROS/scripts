@@ -1,0 +1,2 @@
+[12-Aug-2012 11:44:18 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/asuiti/public_html/yonet/alt/ayarlar.php on line 91
+[13-Sep-2012 16:33:24 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/asuiti/public_html/yonet/alt/ayarlar.php on line 91
