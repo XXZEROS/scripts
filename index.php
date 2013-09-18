@@ -15,7 +15,7 @@ $flood = mysql_query("select ip,time from flood where ip = '".$ip."' and time > 
 while ($fld = mysql_fetch_array($flood))  { $fldvar=1; }
 
 
-	//burda itirafÄ± yapanÄ±n Ã¼ye mi olduÄŸunu kontrol etcez.$itkim
+	//burda itirafý yapanýn üye mi olduðunu kontrol etcez.$itkim
 		function ittmi($itid){
 		
 			$itmi=0;
@@ -85,7 +85,7 @@ $uyeid=$_SESSION['uyeid'];
 $ip=$_SERVER['REMOTE_ADDR'];
 $kc=0; $uyr = mysql_query ("select * from yorum where durum='1' and uyeid='".$uyeid."' ");
 while ($x = mysql_fetch_array($uyr))  { $kc++; }
-if($kc>29) { $durum=1; } else { $durum=0; } //30 yorumu var mÄ± dii kontrol ettik
+if($kc>29) { $durum=1; } else { $durum=0; } //30 yorumu var mý dii kontrol ettik
 
 }
 
@@ -99,30 +99,30 @@ $bid=$_SESSION['uyeid'];  $uyelerzm = mysql_query("select * from uye where id='"
 while ($uyemm = mysql_fetch_array($uyelerzm))  { $durum=0; }
 
 if(isset($_SESSION['uyead']) and isset($_SESSION['uyemail'])and isset($_SESSION['uyeid'])){
-	 // eÄŸer Ã¼yeyse mail rumuz kontrol yapma
+	 // eðer üyeyse mail rumuz kontrol yapma
 
 $sql = "insert into yorum (itid, uyeid, mail, ip, rumuz, cinsiyet, bolum, durum, yorum)
 values ('".$_GET['id']."', '".$uyeid."', '".$_POST['mail']."', '".$ip."', '".$_POST['rumuz']."', '".$_POST['cinsiyet']."', '".$_POST['bolum']."', '".$durum."', '".$_POST['itiraf']."')";
 $kayit = mysql_query($sql);
 	
-	// bildirim gÃ¶nderme alanÄ±-----------------------------------------------------
+	// bildirim gönderme alaný-----------------------------------------------------
 				$itid=$_GET['id'];
 				if(ittmi($itid)!=0) { 
 				$uyeadi = uyead($uyeid); 
 				$itkim=ittmi($itid); 
 		
- $icerx= $_GET['id'].' nolu itirafÄ±na '.$uyeadi.' yorum yaptÄ±.';	
+ $icerx= $_GET['id'].' nolu itirafýna '.$uyeadi.' yorum yaptý.';	
 
 				$sqxl = "insert into bildirim (itid, icerik, o)
 				values ('".$_GET['id']."', '".$icerx."', '".$itkim."')";
 				$kayixt = mysql_query($sqxl);
 
 		}
-		 // bildirme bittÄ±-----------------------------------------------------
+		 // bildirme bittý-----------------------------------------------------
 		
 @header('Location: index.php?ney=itiraf&id='.$_GET['id'].'&islem=tmm'.$hatas);
 
-} else {  //eÄŸer Ã¼ye DEÄžÄ°LSE mail ve rumuz kontrolu yp
+} else {  //eðer üye DEÐÝLSE mail ve rumuz kontrolu yp
 
 if(eregi ("^([a-z0-9_]|\\-|\\.)+@(([a-z0-9_]|\\-)+\\.)+[a-z]{2,4}$", $_POST['mail']) and $_POST['rumuz']<>"" and $_POST['itiraf']<>"") {  
 
@@ -130,13 +130,13 @@ $sql = "insert into yorum (itid, uyeid, mail, ip, rumuz, cinsiyet, bolum, durum,
 values ('".$_GET['id']."', '".$uyeid."', '".$_POST['mail']."', '".$ip."', '".$_POST['rumuz']."', '".$_POST['cinsiyet']."', '".$_POST['bolum']."', '".$durum."', '".$_POST['itiraf']."')";
 $kayit = mysql_query($sql);
 
-		// bildirim gÃ¶nderme alanÄ± -----------------------------------------------------
+		// bildirim gönderme alaný -----------------------------------------------------
 				$itid=$_GET['id'];
 				if(ittmi($itid)!=0) {
 				$uyeadi= $_POST['rumuz'];
 				$itkim=ittmi($itid); 
 		
-		 $icerx= $_GET['id'].' nolu itirafÄ±na '.$uyeadi.' yorum yaptÄ±.';
+		 $icerx= $_GET['id'].' nolu itirafýna '.$uyeadi.' yorum yaptý.';
 		 
 				$sqxlxx = "insert into bildirim (itid, o, icerik)
 				values ('".$_GET['id']."', '".$itkim."', '".$icerx."')";
@@ -148,10 +148,10 @@ $kayit = mysql_query($sql);
 @header('Location: index.php?ney=itiraf&id='.$_GET['id'].'&islem=tmm');	
 } // mail kontrol bitti 
 else  {  @header('Location: index.php?ney=itiraf&id='.$_GET['id'].'&islem=no');	 }
-} // Ã¼ye deÄŸilse
+} // üye deðilse
 
 
-//itirafa yorum sayÄ±sÄ±nÄ± yazdÄ±rÄ±yoruz
+//itirafa yorum sayýsýný yazdýrýyoruz
 if($durum==1) {
 	$yr=0; $yyy = mysql_query ("select id,yorum from itiraf where id='".$_GET['id']."'");
 	while ($y = mysql_fetch_array($yyy))  { $yr=$y['yorum']; } $yr = ($yr+1);
@@ -174,7 +174,7 @@ if($_GET['yorumup']<>"" ){
 	$ipx=$ip;
 
 
-	if($_COOKIE['oy']==$yorid)  { $edc=1; } //eÄŸer oy kullandÄ±ysa
+	if($_COOKIE['oy']==$yorid)  { $edc=1; } //eðer oy kullandýysa
 if($admn==1) { $edc=0;  }
 	if($edc==0) {
 
@@ -196,7 +196,7 @@ $s2 = microtime(true);
 if($_GET['yorumdown']<>"" ){
 	$edc=0;
 	$yorid=$_GET['yorumdown'];
-	if($_COOKIE['oy']==$yorid)  { $edc=1; } //eÄŸer oy kullandÄ±ysa
+	if($_COOKIE['oy']==$yorid)  { $edc=1; } //eðer oy kullandýysa
 if($admn==1) { $edc=0;  }
 	if($edc==0) {
 session_start();
@@ -237,21 +237,21 @@ $s3 = microtime(true);
 <? if($_GET['ney']=="itiraf") {
 	$itiraf = mysql_query ("select id,durum,uyeid,rumuz,katid,gun,ay,yil,saat,baslik from itiraf where durum='1' and id='".$_GET['id']."'");
 	while ($it = mysql_fetch_array($itiraf))  {  ?>
-<META NAME="Description" CONTENT="Yazar: <? $ituye=$it['uyeid']; if($ituye<"1") { echo $it['rumuz']; } else { print uyead($ituye);   } ?>, Ãœniversite: Aksaray Ãœniversitesi, Kategori: <?= katqwe($it['katid']);?>, Site: aksaray.edu.tr, Tarih: <?= $it['gun']?> <?= ay($it['ay']);?> <?= $it['yil']?> - <?= $it['saat']?>">
-<title><?=$it['baslik'];?> - AsÃ¼ Ä°tiraf</title>
+<META NAME="Description" CONTENT="Yazar: <? $ituye=$it['uyeid']; if($ituye<"1") { echo $it['rumuz']; } else { print uyead($ituye);   } ?>, Üniversite: Aksaray Üniversitesi, Kategori: <?= katqwe($it['katid']);?>, Site: aksaray.edu.tr, Tarih: <?= $it['gun']?> <?= ay($it['ay']);?> <?= $it['yil']?> - <?= $it['saat']?>">
+<title><?=$it['baslik'];?> - Asü Ýtiraf</title>
 <? } } else { ?>
-<title>AsÃ¼ Ä°tiraf | AllahÄ±n bildiÄŸini kuldan saklama... AsÃ¼nÃ¼n itiraf sitesi</title>
-<meta name="keywords" content="AsÃ¼ Ä°tiraf, Asuitiraf, aksaray edu, Aksaray Ãœniversitesi, aksaray itiraf, AsÃ¼ dedikodu, dedikodu, asÃ¼ gossip, gossip asu, asÃ¼, asÃ¼ iibf, forum aksaray, aksaray, asu, itiraf, Ã¼niversite itiraf, asÃ¼ pusula, Ã¼ni itiraf" />
-<meta name="abstract" content="AsÃ¼ Ä°tiraf | Aksaray Ãœniversitesi" />
-<meta name="description" content="Aksaray Ãœniversitesi Ä°tiraf Sitesi" />
+<title>Aksaray itiraf | As&#252 &#304tiraf | Allah&#305n bildigini kuldan saklama... Aksaray itiraf sitesi</title>
+<meta name="keywords" content="Asü Ýtiraf, Asuitiraf, aksaray edu, Aksaray Üniversitesi, aksaray itiraf, Asü dedikodu, dedikodu, asü gossip, gossip asu, asü, asü iibf, forum aksaray, aksaray, asu, itiraf, üniversite itiraf, asü pusula, üni itiraf" />
+<meta name="abstract" content="Asü Ýtiraf | Aksaray Üniversitesi" />
+<meta name="description" content="Aksaray Üniversitesi Ýtiraf Sitesi" />
 <? } ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="content-language" content="TR" />
-<meta property="og:title" content="AsÃ¼ Ä°tiraf" />
+<meta property="og:title" content="Asü Ýtiraf" />
 <meta property="og:type" content="school" />
-<meta property="og:url" content="http://www.asuitiraf.com" />
+<meta property="og:url" content="http://www.aksarayitiraf.com" />
 <meta property="og:image" content="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/369559_100002783572908_1337479547_n.jpg" />
-<meta property="og:site_name" content="asu itiraf" />
+<meta property="og:site_name" content="Aksaray Itiraf" />
 <meta property="fb:admins" content="100001581495599" />
 <script src="//connect.facebook.net/tr_TR/all.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
@@ -358,11 +358,12 @@ function gonderon(){
 <style type="text/css">
 
 body {
-	padding: 0 0 0 0;
+ height: 100%;
+  width: 100%;	
+padding: 0 0 0 0;
 	margin: 0;
 	background-attachment: fixed;
-	background-image: url(<?  $menuler2 = mysql_query ("select * from arka where i='1'");
-while ($d = mysql_fetch_array($menuler2))  { echo 'http://www.asuitiraf.net'.$d['back']; } ?>);
+	background-image: url('http://aksarayitiraf.tekbilim.com/images/hd-wallpaper-30.jpg');
 	background-position: center top;
 	background-color: #000;
 }
@@ -427,8 +428,8 @@ color: #3b5998;
   <tr>
     <td bgcolor="#CCCCCC"><center><a href="yonet/" target="_blank">Y&ouml;netim Paneli</a> | <a id="example1"  href="yedek.html">Arkaplan	</a> |
     <a id="example1"  href="yorumlar.html">Yorumlar (<span id="myor"></span>)</a> | 
-<a id="example1"  href="itiraflar.html">Ä°tiraflar (<span id="myon"></span>)</a> | 
-<a id="example1"  href="uyeler.html">Ãœyeler (<span id="muye"></span>)</a> | <a id="example1" href="basvuru.html"><span><?php $okms=1; $aktar = mysql_query ("select * from iletimmesajlari");
+<a id="example1"  href="itiraflar.html">Ýtiraflar (<span id="myon"></span>)</a> | 
+<a id="example1"  href="uyeler.html">&#220yeler (<span id="muye"></span>)</a> | <a id="example1" href="basvuru.html"><span><?php $okms=1; $aktar = mysql_query ("select * from iletimmesajlari");
 while ($okuma = mysql_fetch_array($aktar)) {  $say=$okms++; }  ?>
 <?php $ok=1; $aktar = mysql_query ("select * from iletimmesajlari WHERE okundumu like 0");
 while ($okx = mysql_fetch_array($aktar)) {  $sok=$ok++; }  ?>Mesajlar/Ba&#351;vurular (<?=$sok; if($sok<1) { echo 0; }?>/<?=$say;?>)</span></a></center></td>
@@ -443,14 +444,14 @@ while ($okx = mysql_fetch_array($aktar)) {  $sok=$ok++; }  ?>Mesajlar/Ba&#351;vu
     <div class="aa">
             <div class="ort">
               <div class="logo_asu">
-                <a href="index.php"><img src="images/logos.png" alt="AsÃ¼ Ä°tiraf" border="0" width="223" height="72" /></a>
+                <a href="index.php"><img src="images/logos.png" alt="Asü Ýtiraf" border="0" width="223" height="78" /></a>
               </div>
               <div class="menu_ust">
                 <ul><? 	$s6 = microtime(true); ?>
                   <li><a href="index.php">Ana Sayfa</a></li>
                   <li><a href="index.php?ney=sayfa&bu=1">Kurallar</a></li>
                   <li><a href="index.php?ney=sayfa&bu=2">S&#305;k Sorulanlar</a></li>
-                  <li><a href="index.php?ney=<?php if(isset($_SESSION['uyeid'])){ echo 'mesajlar&amp;gnid=1&amp;msj=oku'; } else { echo 'iletisim'; } ?>">Ä°letiÅŸim</a></li>
+                  <li><a href="index.php?ney=<?php if(isset($_SESSION['uyeid'])){ echo 'mesajlar&amp;gnid=1&amp;msj=oku'; } else { echo 'iletisim'; } ?>">&#304leti&#351im</a></li>
                   <div class="clear"></div>
                 </ul>
               </div>
@@ -466,28 +467,28 @@ while ($okx = mysql_fetch_array($aktar)) {  $sok=$ok++; }  ?>Mesajlar/Ba&#351;vu
 		 $tay=$_GET['ay'];
 		 $tgun=$_GET['gun']; 
 if($ney<>"" | $tgun<>"") {
-?><a href="index.php">Asuitiraf </a>&raquo;<?
+?><a href="index.php">Aksaray - As&#252 itiraf </a>&raquo;<?
 
 
 	 if($ney<>"") {
 
 	if($ney=="itiraf") { $itids=katid($_GET['id']); echo " ".kat($itids); echo " &raquo; ".ait($_GET['id']); } 
 	if($ney=="cat") { $itids=$_GET['cID']; echo " ".kat($itids);   } 
-	if($ney=="itiraf-et") { echo " Ä°tiraf ET !";  } 
-	if($ney=="mesajlar") { echo " MesajlarÄ±n";  }
-	if($ney=="uye-ol") {  echo " Ãœye ol"; }
-	if($ney=="uye-olacak") { echo " Ãœye Ol!";  }
+	if($ney=="itiraf-et") { echo " Ýtiraf ET !";  } 
+	if($ney=="mesajlar") { echo " Mesajlarýn";  }
+	if($ney=="uye-ol") {  echo " Üye ol"; }
+	if($ney=="uye-olacak") { echo " &#220ye Ol!";  }
 	if($ney=="profil-duz") { echo " Profilin";  }
-	if($ney=="pop") { echo " PopÃ¼ler";  }
-	if($ney=="oku") { echo " OkunmamÄ±ÅŸlar";  }
-	if($ney=="cv") { echo " EditÃ¶rlÃ¼k BaÅŸvuru Formu";  }
-	if($ney=="iletisim") { echo " Ä°letiÅŸim Formu";  }
-	if($ney=="kim-la") { echo " Ãœyeler";  }
-	if($ney=="ara") { echo " Arama SonuÃ§larÄ±";  }
+	if($ney=="pop") { echo " Pop&#252ler";  }
+	if($ney=="oku") { echo " Okunmamý&#351lar";  }
+	if($ney=="cv") { echo " Editörlük Ba&#351vuru Formu";  }
+	if($ney=="iletisim") { echo " &#304leti&#351im Formu";  }
+	if($ney=="kim-la") { echo " &#220yeler";  }
+	if($ney=="ara") { echo " Arama Sonu&#351lar&#305";  }
 	
 	
 	} else { ?> <?=$tgun;?> <?= ay($tay);?> <?=$tyil;?>  deki itiraflar<? } } else { ?>
-	<a href="index.php">Yeniler</a> | <a href="index.php?ney=pop">Populer</a> | <a href="index.php?ney=yorum">YorumlanmamÄ±ÅŸ</a> | <a href="index.php?ney=uye-ol">Ãœye ol</a>
+	<a href="index.php">Yeniler</a> | <a href="index.php?ney=pop">Populer</a> | <a href="index.php?ney=yorum">Yorumlanmam&#305&#351</a> | <a href="index.php?ney=uye-ol">&#220ye ol</a>
 <? }?>
         
         </center></div>
@@ -512,11 +513,11 @@ if($ney<>"" | $tgun<>"") {
             <div class="blok_ic">
             <div class="menu_blok">
                 <ul>
-                  <li><a href="index.php?ney=cat&cID=5">A&#351;k</a></li>
-                  <li><a href="index.php?ney=cat&cID=6">Aile</a></li>
+                  <li><a href="index.php?ney=cat&cID=1">Aksaray &#220niversitesi</a></li>
+                    <li><a href="index.php?ney=cat&cID=6">Aile</a></li>
                   <li><a href="index.php?ney=cat&cID=7">Okul</a></li>
-                  <li><a href="index.php?ney=cat&cID=11">Dram</a></li>
-                  <li><a href="index.php?ney=cat&cID=1">Komik</a></li>
+                  <li><a href="index.php?ney=cat&cID=5">A&#351;k</a></li>
+                  <li><a href="index.php?ney=cat&cID=11">Komik</a></li>
                   <li><a href="index.php?ney=cat&cID=14">Protesto</a></li>
                   <li><a href="index.php?ney=cat&cID=8">Pi&#351;manl&#305;k</a></li>
                   <li><a href="index.php?ney=cat&cID=112">G&uuml;zin abla</a></li>
@@ -528,11 +529,11 @@ if($ney<>"" | $tgun<>"") {
               <div class="clear"></div>
             </div>
             
-            <div class="blok_baslik">Pasaport Pizza Aksaray'da</div>
+            <div class="blok_baslik">Reklam Alan&#305</div>
            <div class="blok_ic"></div> <div class="blok_ic">
                      
 <center>
-  <a href="http://pasaportpizza.asuitiraf.com" target="_blank"><img src="reklam/pasaportpizza.jpg" width="200" height="260"></a>
+  <a href="http://aksarayitiraf.tekbilim.com/index.php?ney=iletisim" target="_blank"><img src="reklam/ad5.jpg" width="200" height="260"></a>
 </center>
             </div> <div class="blok_ic"> <div class="clear"></div>
             
@@ -542,9 +543,9 @@ if($ney<>"" | $tgun<>"") {
             <div class="blok_ic">
             <div class="menu_blok">
                 <ul>
-                  <li><a href="index.php?ney=uye-ol">Ãœye ol</a></li>
+                  <li><a href="index.php?ney=uye-ol">&#220ye ol</a></li>
                   <li><a href="index.php?ney=sayfa&bu=3">Biz kimiz?</a></li>
-                   <li><a href="index.php?ney=sayfa&bu=4">Site HakkÄ±nda</a></li>
+                   <li><a href="index.php?ney=sayfa&bu=4">Site Hakk&#305nda</a></li>
                   <li><a href="index.php?ney=cv">Edit&ouml;rl&uuml;k ba&#351;vurusu</a></li>
               	<div class="clear"></div>
                 </ul>
@@ -557,38 +558,38 @@ if($ney<>"" | $tgun<>"") {
     <td> <?php $s11 = microtime(true); ?>
  <table width="95%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td>Online KiÅŸi SayÄ±sÄ± </td>
+      <td>Online Ki&#351i Say&#305s&#305 </td>
       <td><strong>:</strong></td>
       <td style="text-align: right"><div id="mon"></div></td>
     </tr>
    <tr>
-      <td>Online Ãœye SayÄ±sÄ±</td>
+      <td>Online &#220ye Say&#305s&#305</td>
       <td><strong>:</strong></td>
       <td style="text-align: right"><?=$onuye;?></td>
     </tr>
     <tr>
-      <td>Online Admin SayÄ±sÄ±</td>
+      <td>Online Admin Say&#305s&#305</td>
       <td><strong>:</strong></td>
       <td style="text-align: right"><?=$onadmin;?></td>
     </tr>
   <tr>
-      <td width="65%">BugÃ¼n Tekil Ziyaret</td>
+      <td width="65%">Bug&#252n Tekil Ziyaret</td>
       <td width="6%"><strong>:</strong></td>
       <td width="29%" style="text-align: right"><?=$tbugun;?> </td>
     </tr>
     <tr>
-      <td width="65%">DÃ¼n Tekil Ziyaret</td>
+      <td width="65%">D&#252n Tekil Ziyaret</td>
       <td width="6%"><strong>:</strong></td>
       <td width="29%" style="text-align: right"><? if($tdun<1) { echo '900'; } else { echo $tdun; }?></td>
     </tr>
     <tr>
-      <td>Toplam Ä°tiraf SayÄ±sÄ±</td>
+      <td>Toplam &#304tiraf Say&#305s&#305</td>
       <td><strong>:</strong></td>
       <td style="text-align: right"><? $toplamveri=0; $aktar = mysql_query ("select id,durum from itiraf where durum='1' order by id desc  "); 
 while ($sirala= mysql_fetch_array($aktar)) {$toplamveri++;} echo $toplamveri; ?></td>
     </tr>
     <tr>
-      <td>Toplam Yorum SayÄ±sÄ±</td>
+      <td>Toplam Yorum Say&#305s&#305</td>
       <td><strong>:</strong></td>
       <td style="text-align: right"><? $toplamveriz=0; $aktars = mysql_query ("select id,durum from yorum where durum='1' order by id desc  "); 
 while ($siralaw= mysql_fetch_array($aktars)) {$toplamveriz++;} echo $toplamveriz; ?></td>
@@ -599,7 +600,7 @@ while ($siralaw= mysql_fetch_array($aktars)) {$toplamveriz++;} echo $toplamveriz
       <td width="29%" style="text-align: right"><?=($ttt+68000);?> </td>
     </tr>
     <tr>
-      <td>Toplam TÄ±klanma</td>
+      <td>Toplam T&#305klanma</td>
 <td><strong>:</strong></td>
       <td style="text-align: right"><?   $tiklama = mysql_query ("select * from tiklama");
 while ($tikk = mysql_fetch_array($tiklama))  { 
@@ -689,7 +690,7 @@ while ($uyem = mysql_fetch_array($uyelerz))  { ?>
                       <td style="text-align: center"><strong>:</strong></td>
                       <td><? $am=$uyem['cinsiyet'];
 				if($am==1) { echo "Erkek";} 
-				if($am==2) { echo "KadÄ±n"; } ?></td>
+				if($am==2) { echo "Kadýn"; } ?></td>
                     </tr>
                     <tr>
                       <td style="text-align: right"><strong>Aktiflik</strong></td>
@@ -724,14 +725,14 @@ while ($zx = mysql_fetch_array($iss))  {
 ?><a href="index.php?ney=<?=$zx['ney'];?>&bu=<?=$zx['bu'];?>"><? echo uye($zx['uyeID']);?></a>
                - <? } ?> <br /><br />
 
-Ãœye ne yapÄ±yo : <?
+&#220ye ne yap&#305yo : <?
 $simdi=time(); // simdiki zaman
 $besdk=($simdi-10); // 5 sn onceki zaman
   $iss = mysql_query("select * from islem where time>'".$besdk."' and uyeID='".$bu."'");
 while ($zx = mysql_fetch_array($iss))  {  
 ?><a href="index.php?ney=<?=$zx['ney'];?>&id=<?=$zx['bu'];?>&bu=<?=$zx['bu'];?>&gnid=<?=$zx['bu'];?>"><? echo $zx['ney'].' = '.$zx['bu'];?></a>
                - <? } ?><br /><br />
-               Ãœye ne yapmÄ±ÅŸ : <lu><?
+               &#220ye ne yapm&#305&#351 : <lu><?
 $simdi=time(); // simdiki zaman
 $besdk=($simdi-10); // 5 sn onceki zaman
   $iss = mysql_query("select * from islem where uyeID='".$bu."' order by time desc limit 20");
@@ -741,7 +742,7 @@ while ($zx = mysql_fetch_array($iss))  {
 <li><a href="index.php?ney=<?=$zx['ney'];?>&id=<?=$zx['bu'];?>&bu=<?=$zx['bu'];?>&gnid=<?=$zx['bu'];?>"><? echo $zx['ney'].' = '.$zx['bu'];?></a> - <? $zmn=$zx['time']; echo date('d/m/Y - H.i', $zmn); ?></li> <? } ?></lu><br /><br />
 
 
-             &raquo;  <a href="./yonet/moduller/uyeler/s-duzenle.php?ID=<?=$bu;?>" target="_blank">Ãœye dÃ¼zelt</a><br />
+             &raquo;  <a href="./yonet/moduller/uyeler/s-duzenle.php?ID=<?=$bu;?>" target="_blank">&#220ye d&#252zelt</a><br />
 
               <hr /><?  } ?>
 
@@ -756,7 +757,7 @@ while ($yrw = mysql_fetch_array($yorrumm))  { $itrf++;
 
 ?> 
 <div class="bttns">&raquo; <a href="index.php?ney=itiraf&id=<?=$yrw['id'];?>"><?=$yrw['baslik'];?>.</a></div>
-<? } if($itrf==0) { echo "HiÃ§ itirafÄ± yok bu Ã¼yenin !"; }  ?></td>
+<? } if($itrf==0) { echo "Hi&#231 itiraf&#305 yok bu &#252yenin !"; }  ?></td>
   </tr>
   <tr>
     <td class="yorumic">Son Yorumlar&#305;</td>
@@ -768,7 +769,7 @@ while ($yrw = mysql_fetch_array($yorrumm))  {
 	if($itdurum==1) { $yrmm++;
 ?> 
 <div class="bttns">&raquo; <a href="index.php?ney=itiraf&id=<?=$yrw['itid'];?>"><?=ait($yrw['itid']);?>.</a> i&ccedil;in <? $ituye=$yrw['uyeid']; if($ituye<"1") { echo $yrw['rumuz']. ' - '.rss($yrw['cinsiyet']); } else { print uye($ituye);   } ?></div>
-<? } } if($yrmm==0) { echo "HiÃ§ yorumu yok bu Ã¼yenin !"; }  ?></td>
+<? } } if($yrmm==0) { echo "Hi&#231 yorumu yok bu &#252yenin !"; }  ?></td>
   </tr>
 </table>
 
@@ -1021,8 +1022,8 @@ if(($start-$per_page) >= 0)
        <tr>
         
          <td></td>
-         <td><input type="submit" name="giris" id="giris" value="GiriÅŸ Yap" />
-           ya da            <a href="index.php?ney=uye-ol">Ãœye OL !</a></td>
+         <td><input type="submit" name="giris" id="giris" value="Giri&#351  Yap" />
+           ya da            <a href="index.php?ney=uye-ol">&#220ye OL !</a></td>
        </tr>
       
      </table>
@@ -1171,14 +1172,14 @@ while ($uyem = mysql_fetch_array($uyelerz))  { ?><?=$_SESSION['uyead']?>
         <a href="index.php?ney=profil-duz">Ayarlar</a><br />
         <? $admn=$uyem['admin']; if($admn==1) { ?>
         <a href="yonet/" target="_blank">Y&ouml;netim Paneli</a><br /><? } ?>
-<a href="cikis.php">Ã‡Ä±kÄ±ÅŸ yap</a></td>
+<a href="cikis.php">&#199&#305k&#305&#351 yap</a></td>
   </tr><? } ?>
 </table>
               <div class="clear"></div>
             
     
     <? } else { ?>
-    <div class="blok_button" onclick="location.href='index.php?ney=giris'" style="cursor:&#112;ointer">giri&#351; yap &raquo;</div><? } ?>
+    <div class="blok_button" onclick="location.href='index.php?ney=giris'" style="cursor:&#112;ointer">Giri&#351; yap - &#220ye ol &raquo;</div><? } ?>
             </div>
             <div class="blok_baslik">takvim</div>
             <div class="blok_ic">
@@ -1197,7 +1198,7 @@ function showCalendar(){
 	$gay=($onay-1);
 	if(isset($tay)) { $today['mon']=$tay; $gay=($tay-1); }
 
-	if($gay==0) { $gyil=($tyil-1); $gay=12; } //eger 1. aydaysa 1 yÄ±l erken ve 12. ay yapÄ±k
+	if($gay==0) { $gyil=($tyil-1); $gay=12; } //eger 1. aydaysa 1 yýl erken ve 12. ay yapýk
 	
 	$syil = $onyil; if($tay==12) { $syil=($tyil+1); }
 	$ssay = ($tay+1); 
@@ -1214,17 +1215,17 @@ function showCalendar(){
 	
 	$aylar = Array(
 		"1" => "Ocak", 
-		"2" => "Åžubat", 
+		"2" => "Þubat", 
 		"3" => "Mart", 
 		"4" =>  "Nisan", 
-		"5" =>  "MayÄ±s", 
+		"5" =>  "Mayýs", 
 		"6" =>  "Haziran", 
 		"7" =>  "Temmuz", 
-		"8" =>  "AÄŸustos", 
-		"9" =>  "EylÃ¼l", 
+		"8" =>  "Aðustos", 
+		"9" =>  "Eylül", 
 		"10" =>  "Ekim", 
-		"11" =>  "KasÄ±m", 
-		"12" =>  "AralÄ±k"
+		"11" =>  "Kasým", 
+		"12" =>  "Aralýk"
 );
 
 
@@ -1232,7 +1233,7 @@ function showCalendar(){
 	echo '<table>';
 	echo '  <tr><th colspan="7"><a href="index.php?yil='.$gyil.'&ay='.$gay.'">&laquo;</a> - '.$aylar[$ay]." - ".$today['year'].$sonay."</th></tr>";
 	echo '<tr class="days">';
-	echo '  <td>Pzt</td><td>Sal</td><td>Ã‡ar</td><td>Per</td>';
+	echo '  <td>Pzt</td><td>Sal</td><td>&#199ar</td><td>Per</td>';
 	echo '  <td>Cum</td><td>Cmt</td><td>Pzr</td></tr>';
 	
 	
@@ -1319,7 +1320,7 @@ function showCalendar(){
             <div class="blok_ic"></div>
             <div class="blok_ic">
               <div class="facebook">
-                <iframe src="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/AS%C3%9C-%C4%B0tiraf/258230557529879&amp;width=200&amp;colorscheme=light&amp;border_color=AAAAAA&amp;show_faces=true&amp;connections=8&amp;stream=false&amp;header=true&amp;height=292" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:190px; height:292px;" allowtransparency="true"></iframe>
+                <iframe src="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/Aksaray.itiraf.ediyorum/119280971603316&amp;width=200&amp;colorscheme=light&amp;border_color=AAAAAA&amp;show_faces=true&amp;connections=8&amp;stream=false&amp;header=true&amp;height=292" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:190px; height:310px;" allowtransparency="true"></iframe>
               </div>
               <div class="clear"></div>
             </div>
@@ -1336,6 +1337,7 @@ while ($yrw = mysql_fetch_array($yorrumm))  {
 	$itdurum=aitdurum($yrw['itid']);
 	if($itdurum==1) {
 ?><tr>
+
     <td> &raquo; <a href="index.php?ney=itiraf&id=<?=$yrw['itid'];?>"><?=ait($yrw['itid']);?>.</a> i&ccedil;in <? $ituye=$yrw['uyeid']; if($ituye<"1") { echo $yrw['rumuz']; } else { print uyex($ituye);   } ?>
 </td>
   </tr><? } } ?>
@@ -1371,3 +1373,25 @@ while ($ouy = mysql_fetch_array($onuye))  { $sgk++; ?>
 
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="_wau7wl">var _wau = _wau || []; _wau.push(["small", "m2thpa8ma67m", "7wl"]);
+(function() {var s=document.createElement("script"); s.async=true;
+s.src="http://widgets.amung.us/small.js";
+document.getElementsByTagName("head")[0].appendChild(s);
+})();</script>
+
+
+

@@ -92,5 +92,5 @@ while ($msjs = mysql_fetch_array($mesajlasr))  {
 	  <? if($admn==1) {  ?>
 <center><textarea name="ssss" cols="50" rows="10">
 Anasayfaya göndermek için: <br />
-<meta http-equiv="refresh" content="10;url=http://www.asuitiraf.net/index.php"></textarea></center>
+<meta http-equiv="refresh" content="10;url=http://www.aksarayitiraf.com/index.php"></textarea></center>
 <? } ?></div>

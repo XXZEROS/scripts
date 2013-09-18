@@ -1,4 +1,4 @@
-<?php require_once('../Connections/baglanti.php'); 
+﻿<?php require_once('../Connections/baglanti.php'); 
 
 if(isset($_SESSION['uyead']) and isset($_SESSION['uyemail'])and isset($_SESSION['uyeid']) ){
 $admn=admins($_SESSION['uyeid']); if($admn==1) { 
@@ -100,8 +100,8 @@ echo "$tarih";
 		<ul class="sub">
 			<li><a href="index.php">Yönetim Merkezi</a></li>			
             <li><a href="alt/ayarlar.php?dili=tr" target="orta">profilim</a></li>
-            <li><a target="_blank" href="../index.php">Siteyi Görüntüle</a></li>
-          <li><a href="cikis.php">Çıkış</a></li>
+            <li><a target="_blank" href="../index.php">Siteyi Goruntule</a></li>
+          <li><a href="cikis.php">Cikis</a></li>
           
           
         </ul>

@@ -1,4 +1,4 @@
-<? ob_start(); require_once('../../../Connections/baglanti.php');
+﻿<? ob_start(); require_once('../../../Connections/baglanti.php');
 require_once('../../../foksiyon.php');
 if(isset($_SESSION['uyead']) and isset($_SESSION['uyemail'])and isset($_SESSION['uyeid'])){  
 $admn=admins($_SESSION['uyeid']); if($admn==1) {  
@@ -16,14 +16,14 @@ if($_POST['gonder']=="ok") {
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
-$mail->Host = 'mail.asuitiraf.com';
+$mail->Host = 'mail.tekbilim.com';
 $mail->Port = 587;
-$mail->Username = 'info@asuitiraf.com';
-$mail->Password = '643216';
-$mail->SetFrom($mail->Username, 'ASÜ İTİRAF');
+$mail->Username = 'support@tekbilim.com';
+$mail->Password = 'su8465su';
+$mail->SetFrom($mail->Username, 'Aksaray iTiRAF');
 $mail->AddAddress($email, $rumuz);
 $mail->CharSet = 'UTF-8';
-$mail->Subject = 'ASÜ İTİRAF İLETİŞİM';
+$mail->Subject = 'Aksaray iTiRAF iLETiSiM';
 $mail->MsgHTML($icmail);
 if($mail->Send()) {
     echo '<br />
@@ -120,7 +120,7 @@ Mesaj metniniz: ** <?=$oku['yazi'];?> **
 <br />
 
 	<hr />
-    <a href="http://www.asuitiraf.com">www.asuitiraf.com</a>  @Asuitiraf Yönetimi<br />
+    <a href="http://www.aksarayitiraf.com">www.aksarayitiraf.com</a>  @Aksarayitiraf Yönetimi<br />
 	</textarea>
     <input name="gonder" type="hidden" value="ok" />
      <input name="mailxx" type="hidden" value="<?=$oku['mail'];?>" />

@@ -38,7 +38,7 @@ Lütfen tüm alanları doldurun ve geçerli bir e-mail adresi giriniz :@
     <td><strong>
       <label>
         <select name="cinsiyet" id="cinsiyet">
-          <? $ccins=$_COOKIE["ccins"]; if(isset($ccins)) { 
+       <option value="">SECINIZ</option>   <? $ccins=$_COOKIE["ccins"]; if(isset($ccins)) { 
 		  
  if($ccins==1) { ?><option value="1">Erkek</option>
  				   <option value="2">Kadın</option><? } //erkekse bitti
@@ -66,7 +66,7 @@ Lütfen tüm alanları doldurun ve geçerli bir e-mail adresi giriniz :@
     <td><strong>
       <label>
         <select name="kat" id="kat">
-          <?php $mekl = mysql_query ("select * from kategori order by id asc");
+     <option value="">SECINIZ</option>  <?php $mekl = mysql_query ("select * from kategori order by id asc");
 while ($q = mysql_fetch_array($mekl))  { ?><option value="<?=$q['id'];?>"><?=$q['baslik'];?></option><? } ?>
          
         </select>

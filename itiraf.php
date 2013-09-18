@@ -1,4 +1,4 @@
-<? if(1==2) { ?> <link href="style.css" rel="stylesheet" type="text/css" />
+﻿<? if(1==2) { ?> <link href="style.css" rel="stylesheet" type="text/css" />
 <?php }
 
 $bilo=$_SESSION['uyeid'];
@@ -28,22 +28,12 @@ $kilit=$it['kilit'];
                 <div class="sayfa_ne"><? $ituye=$it['uyeid']; if($ituye<"1") { echo $it['rumuz']. ' - '.rss($it['cinsiyet']); } else { print uye($ituye);   } ?>; <?= $it['gun']?> <?= ay($it['ay']);?> <?= $it['yil']?>, <?= $it['saat']?>, Kat:  <?= kat($it['katid']);?>, Okunma: <?=$oku;?><hr />
 <?= smiley($it['itiraf']);?>
 <hr /><div style="margin-left:-10px;">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-5504202134528494";
-/* itirafalt */
-google_ad_slot = "2337623865";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
+</div>
 <?  $itirafw = mysql_query ("select * from itiraf where durum='1' and id>'".$_GET['id']."' order by id desc limit 1");
 while ($itw = mysql_fetch_array($itirafw))  { $onid=$itw['id']; }
   $itirafs = mysql_query ("select * from itiraf where durum='1' and id<'".$_GET['id']."' order by id desc limit 1");
 while ($its = mysql_fetch_array($itirafs))  { $sonid=$its['id']; } ?>
-<strong style="float:left"><a href="itiraf-<?=$sonid;?>.html">&laquo; Önceki itiraf</a></strong><strong style="float:left; margin-left:70px;"><a href="index.php?ney=iletisim&amp;c=1&amp;ID=<?=$_GET['id'];?>"><img src="yonet/moduller/itiraf/images/cancel.png" width="17" border="0" align="absbottom" /> Bu itirafı şikayet et !</a></strong><? if($onid) { ?><strong style="float:right"><a href="itiraf-<?=$onid;?>.html" >Sonraki itiraf &raquo;</a></strong><? } ?><? if($admn==1) { 
+<strong style="float:left"><a href="itiraf-<?=$sonid;?>.html">&laquo; &#214nceki itiraf</a></strong><strong style="float:left; margin-left:70px;"><a href="index.php?ney=iletisim&amp;c=1&amp;ID=<?=$_GET['id'];?>"><img src="yonet/moduller/itiraf/images/cancel.png" width="17" border="0" align="absbottom" /> Bu itiraf&#305  &#350ikayet et !</a></strong><? if($onid) { ?><strong style="float:right"><a href="itiraf-<?=$onid;?>.html" >Sonraki itiraf &raquo;</a></strong><? } ?><? if($admn==1) { 
 			  
 			    if($_GET['kilit']=="evet" ){ 
 	$kilitledik = mysql_query("UPDATE itiraf SET kilit='1' WHERE id='".$_GET['id']."'"); 
@@ -60,7 +50,7 @@ window.location.href=\"index.php?ney=itiraf&id=".$_GET['id']."\"
 </script>";
 				}
 ?> <div class="clear"></div>
-- <a id="example1" href="d-itiraf.php?id=<?= $it['id']?>">Düzenle</a> - <a  href="index.php?ney=itiraf&id=<?=$_GET['id'];?>&kilit=<? if($kilit==1) { echo "kaldir"; } else { echo "evet";} ?>"><? if($kilit==1) { echo "Kilit Kaldır"; } else { echo "Kilitle";} ?></a> - <a href="yonet/moduller/itiraf/s-listele.php?o=c&amp;id=<?= $it['id'];?>" onClick="return confirm('İtirafı çöpe fırlatmak ister misiniz!');">Çöpe at</a> - <a href="yonet/moduller/itiraf/s-listele.php?sil=evet&amp;id=<?= $it['id'];?>" onClick="return confirm('İtirafı sonsuza dek silmek ister misiniz!');">Yok et</a><? } ?>
+- <a id="example1" href="d-itiraf.php?id=<?= $it['id']?>">D&#252zenle</a> - <a  href="index.php?ney=itiraf&id=<?=$_GET['id'];?>&kilit=<? if($kilit==1) { echo "kaldir"; } else { echo "evet";} ?>"><? if($kilit==1) { echo "Kilit Kaldır"; } else { echo "Kilitle";} ?></a> - <a href="yonet/moduller/itiraf/s-listele.php?o=c&amp;id=<?= $it['id'];?>" onClick="return confirm('İtirafı çöpe fırlatmak ister misiniz!');"> &#199&#246pe at</a> - <a href="yonet/moduller/itiraf/s-listele.php?sil=evet&amp;id=<?= $it['id'];?>" onClick="return confirm('İtirafı sonsuza dek silmek ister misiniz!');">Yok et</a><? } ?>
 </div>
             </div>
             </div>
@@ -99,7 +89,7 @@ while ($yor = mysql_fetch_array($yorumlar))  { $itsay++;?>
   <div class="yorum_ic_alt">
     <div class="yorum_ne"><?=  smiley($yor['yorum']);?><hr />
 <? if($admn==1) { ?>
-<span style="text-align: right"><a id="example1" href="d-yorum.php?id=<?= $yor['id']?>">Düzenle</a> - <a href="yonet/moduller/yorum/s-listele.php?o=c&id=<?= $yor['id'];?>" onClick="return confirm('Yorumu çöpe fırlatmak ister misiniz!');">Çöpe at</a> - <a href="yonet/moduller/yorum/s-listele.php?sil=evet&id=<?= $yor['id'];?>" onClick="return confirm('Yorumu sonsuza dek silmek ister misiniz!');"><img src="yonet/moduller/itiraf/images/cancel.png" width="17" border="0" align="absbottom" /></a></span> - <?=$yor['ip'];?> - <?=$yor['mail'];?><hr />
+<span style="text-align: right"><a id="example1" href="d-yorum.php?id=<?= $yor['id']?>">D&#252zenle</a> - <a href="yonet/moduller/yorum/s-listele.php?o=c&id=<?= $yor['id'];?>" onClick="return confirm('Yorumu çöpe fırlatmak ister misiniz!');">&#199&#246pe at</a> - <a href="yonet/moduller/yorum/s-listele.php?sil=evet&id=<?= $yor['id'];?>" onClick="return confirm('Yorumu sonsuza dek silmek ister misiniz!');"><img src="yonet/moduller/itiraf/images/cancel.png" width="17" border="0" align="absbottom" /></a></span> - <?=$yor['ip'];?> - <?=$yor['mail'];?><hr />
 
 <? } ?><? $edc=0;
 	$yorid=$yor['id'];
@@ -148,15 +138,15 @@ if($admn==1) { $edc=0;  }
 
 
 <?  if($_GET['islem']=="tmm" ){ ?>
-<div class="onay">Yorumunuz Onaya Gönderildi. Anasayfaya gitmek için <a href="index.php" class="a">tıklatınız.</a> </div>
+<div class="onay">Yorumunuz Onaya G&#246nderildi. Anasayfaya gitmek i&#231in <a href="index.php" class="a">t&#305klat&#305n&#305z.</a> </div>
 
 <? }   if($_GET['islem']=="no" ){ ?>
-<div class="yasak">Lütfen tüm alanları doldurun ve geçerli bir e-mail adresi giriniz :@ </div>
+<div class="yasak">L&#252tfen t&#252m alanlar&#305  doldurun ve geçerli bir e-mail adresi giriniz :@ </div>
 
 
 <? } if($kilit==1) { ?>
 
-<div class="dikkat">İtiraf Kilitlenmiştir! </div><? } 
+<div class="dikkat">İtiraf Kilitlenmi&#351tir! </div><? } 
 $gs=1;
 if($kilit==1) { $gs=0; }
 if($admn==1) { $gs=1; } 
@@ -183,10 +173,10 @@ function smileekle(thesmile) {
  <center> <? if(isset($_SESSION['uyead']) and isset($_SESSION['uyemail'])and isset($_SESSION['uyeid'])){  ?>
        <a href="index.php?ney=kim-la&bu=<?=$_SESSION['uyeid'];?>">
         <?=$_SESSION['uyead'];?>
-  </a> olarak giriş yaptınız. <a href="cikis.php">Çıkış yap &raquo;</a>
+  </a> olarak giri&#351 yapt&#305n&#305z. <a href="cikis.php">&#199&#305k&#305&#351 yap &raquo;</a>
 	   <table width="400" border="0" cellpadding="2" cellspacing="0">
 	   <? } else { ?>
-	   <a href="index.php?ney=giris">Giriş yapın!</a> , <a href="index.php?ney=uye-ol">Üye olun </a>ya da tüm alanları doldurun !</center>
+	   <a href="index.php?ney=giris">Giri&#351 yap&#305n!</a> , <a href="index.php?ney=uye-ol">&#220ye olun </a>ya da t&#252m alanlar&#305  doldurun !</center>
 	   <table width="443" border="0" align="center" cellpadding="2" cellspacing="0">
        <tr>
     <td width="71"><strong>Rumuz</strong></td>
@@ -232,7 +222,7 @@ function smileekle(thesmile) {
 
  
 </td>
-    <td width="16%"><input type="submit" name="gonder" id="gonder" value="Gönder" />
+    <td width="16%"><input type="submit" name="gonder" id="gonder" value="G&#246nder" />
       <input name="ekle" type="hidden" id="ekle" value="ok" />
        </td>
   </tr>

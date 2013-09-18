@@ -3,19 +3,19 @@
 # Type="MYSQL"
 # HTTP="true"
 $hostname_baglanti = "localhost";
-$database_baglanti = "axaturk_nm";
-$username_baglanti = "axaturk_net";
-$password_baglanti = "643216";
+$database_baglanti = "itirafak_test";
+$username_baglanti = "itirafak_ilyas";
+$password_baglanti = "il3939";
 $baglanti = mysql_pconnect($hostname_baglanti, $username_baglanti, $password_baglanti) or trigger_error(mysql_error(),E_USER_ERROR); 
 
-$site="http://178.162.160.97/~axaturk";
+$site="http://itiraf.aksarayitiraf.com/";
 
 
 
 function link($strr)
 {
   $from_arr=array("<site>", "&lt;site&gt;","../../../","../../","../");
-  $to_arr=array("http://178.162.160.97/~axaturk","http://178.162.160.97/~axaturk/","http://178.162.160.97/~axaturk/","http://178.162.160.97/~axaturk/admin/","http://178.162.160.97/~axaturk/admin/moduller/");
+  $to_arr=array("http://itiraf.aksarayitiraf.com/","http://itiraf.aksarayitiraf.com/","http://itiraf.aksarayitiraf.com/","http://itiraf.aksarayitiraf.com/admin/","http://itiraf.aksarayitiraf.com/admin/moduller/");
 
   return str_replace($from_arr, $to_arr, $strr);
 } 

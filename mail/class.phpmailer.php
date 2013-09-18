@@ -78,13 +78,13 @@ class PHPMailer {
    * Sets the From email address for the message.
    * @var string
    */
-  public $From              = 'root@localhost';
+  public $From              = 'support@tekbilim.com';
 
   /**
    * Sets the From name of the message.
    * @var string
    */
-  public $FromName          = 'Root User';
+  public $FromName          = 'Admin';
 
   /**
    * Sets the Sender email (Return-Path) of the message.  If not empty,
@@ -174,7 +174,7 @@ class PHPMailer {
    * by SERVER_NAME is used or 'localhost.localdomain'.
    * @var string
    */
-  public $Hostname          = '';
+  public $Hostname          = 'mail.tekbilim.com';
 
   /**
    * Sets the message ID to be used in the Message-Id header.
@@ -195,19 +195,19 @@ class PHPMailer {
    * Hosts will be tried in order.
    * @var string
    */
-  public $Host          = 'localhost';
+  public $Host          = 'mail.tekbilim.com';
 
   /**
    * Sets the default SMTP server port.
    * @var int
    */
-  public $Port          = 25;
+  public $Port          = 587;
 
   /**
    * Sets the SMTP HELO of the message (Default is $Hostname).
    * @var string
    */
-  public $Helo          = '';
+  public $Helo          = 'mail.tekbilim.com';
 
   /**
    * Sets connection prefix.
@@ -2151,7 +2151,7 @@ class PHPMailer {
     } elseif (isset($_SERVER['SERVER_NAME'])) {
       $result = $_SERVER['SERVER_NAME'];
     } else {
-      $result = 'localhost.localdomain';
+      $result = 'smtp.tekbilim.com';
     }
 
     return $result;

@@ -51,7 +51,7 @@ function showCalendar(){
 	echo '<table>';
 	echo '  <tr><th colspan="7">'.$aylar[$ay]." - ".$today['year']."</th></tr>";
 	echo '<tr class="days">';
-	echo '  <td>Pzt</td><td>Sal</td><td>Çar</td><td>Per</td>';
+	echo '  <td>Pzt</td><td>Sal</td><td>&#199;ar</td><td>Per</td>';
 	echo '  <td>Cum</td><td>Cmt</td><td>Pzr</td></tr>';
 	
 	

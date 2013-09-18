@@ -30,7 +30,7 @@ while ($d = mysql_fetch_array($menuler2))  {
 ?>
 <table width="100%" border="0" cellspacing="0" cellpadding="5">
   <tr>
-    <th scope="col"><img src="http://www.asuitiraf.com<?=$d['back'];?>" width="500" height="315"></th>
+    <th scope="col"><img src="http://www.aksarayitiraf.com<?=$d['back'];?>" width="500" height="315"></th>
   </tr>
   <tr>
     <td><table width="100%" border="0" cellspacing="0" cellpadding="5">
@@ -46,4 +46,4 @@ while ($d = mysql_fetch_array($menuler2))  {
 </table>
 
 <?	
-} } else { echo "sektir lan";} ?>
+} } else { echo "Adam ol";} ?>

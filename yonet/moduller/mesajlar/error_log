@@ -1,0 +1,2 @@
+[22-Apr-2013 22:59:41 Europe/Istanbul] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ondblrwe/public_html/aksarayitiraf/yonet/moduller/mesajlar/ileti-ayar.php on line 69
+[23-Apr-2013 23:58:47 Europe/Istanbul] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ondblrwe/public_html/aksarayitiraf/yonet/moduller/mesajlar/ileti-ayar.php on line 69

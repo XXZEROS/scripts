@@ -60,7 +60,7 @@ if(!mysql_query($uyeekle,$bag))
   die('Error: ' . mysql_error());
   }else{
   echo" uye formun basariyla gonderildi
-  <br>şifren asagidaki mail adresine gonderildi. Eger gozukmuyorsa SPAM/GEREKSIZ klasorune bakmayı unutmayın!<br><br>
+  <br>sifren asagidaki mail adresine gonderildi. Eger gozukmuyorsa SPAM/GEREKSIZ klasorune bakmayi unutmayin!<br><br>
   <b>kullanici adin:</b>$_POST[kadi]<br>
   <b>mail adresin:</b>$_POST[mail]<br>
   <br><a href='index.php'>anasayfaya git</a>
@@ -71,26 +71,26 @@ if(!mysql_query($uyeekle,$bag))
 
 	$email=$_POST['mail'];
 	
-	$icmail='Sitemize kayıt olduğunuz için teşekkürler.
+	$icmail='Sitemize kayit oldugunuz icin tesekkurler.
 	<br />
 	<br />
-	K.adınız: '.$rumuz.'<br />
-	Şifreniz: '.$sifrex.'<br />
+	K.adiniz: '.$rumuz.'<br />
+	Sifreniz: '.$sifrex.'<br />
 	<br />
-	www.asuitiraf.com<br />
-	www.asuitiraf.net den giriş yapabilirsiniz. Bol itiraflar :)';
+	www.aksarayitiraf.com<br />
+	www.aksarayitiraf.net den giris yapabilirsiniz. Bol itiraflar :)';
 	
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
-$mail->Host = 'mail.asuitiraf.com';
+$mail->Host = 'mail.tekbilim.com';
 $mail->Port = 587;
-$mail->Username = 'info@asuitiraf.com';
-$mail->Password = '643216';
-$mail->SetFrom($mail->Username, 'ASÜ İTİRAF');
+$mail->Username = 'support@tekbilim.com';
+$mail->Password = 'su8465su';
+$mail->SetFrom($mail->Username, 'Aksaray iTiRAF');
 $mail->AddAddress($email, $rumuz);
 $mail->CharSet = 'UTF-8';
-$mail->Subject = 'ASÜ İTİRAF Üyelik Şifreniz';
+$mail->Subject = 'Aksaray iTiRAF uyelik sifreniz';
 $mail->MsgHTML($icmail);
 if($mail->Send()) {
     echo '<br />

@@ -79,7 +79,7 @@ class PHPMailer {
    * Sets the From name of the message.
    * @var string
    */
-  public $FromName          = 'Aksaray Yesiltepe Kooperatifi';
+  public $FromName          = 'Aksaray';
 
   /**
    * Sets the Sender email (Return-Path) of the message.  If not empty,
@@ -175,7 +175,7 @@ class PHPMailer {
    * Hosts will be tried in order.
    * @var string
    */
-  public $Host        = 'localhost';
+  public $Host        = 'mail.tekbilim.com';
 
   /**
    * Sets the default SMTP server port.

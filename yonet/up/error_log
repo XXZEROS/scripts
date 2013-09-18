@@ -1,0 +1,3 @@
+[20-Apr-2013 01:51:32 Europe/Istanbul] PHP Warning:  fileperms() [<a href='function.fileperms'>function.fileperms</a>]: stat failed for ../../depo in /home/ondblrwe/public_html/aksarayitiraf/yonet/up/index.php on line 104
+[20-Apr-2013 01:52:42 Europe/Istanbul] PHP Warning:  fileperms() [<a href='function.fileperms'>function.fileperms</a>]: stat failed for ../../depo in /home/ondblrwe/public_html/aksarayitiraf/yonet/up/index.php on line 104
+[20-Apr-2013 01:52:46 Europe/Istanbul] PHP Warning:  fileperms() [<a href='function.fileperms'>function.fileperms</a>]: stat failed for ../../depo in /home/ondblrwe/public_html/aksarayitiraf/yonet/up/index.php on line 104

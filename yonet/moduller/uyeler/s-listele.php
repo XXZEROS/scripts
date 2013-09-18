@@ -1,4 +1,4 @@
-<? ob_start(); require_once('../../../Connections/baglanti.php');
+﻿<? ob_start(); require_once('../../../Connections/baglanti.php');
 require_once('../../../foksiyon.php');
 if(isset($_SESSION['uyead']) and isset($_SESSION['uyemail'])and isset($_SESSION['uyeid'])){  
 $admn=admins($_SESSION['uyeid']); if($admn==1) { 
@@ -14,26 +14,26 @@ $admn=admins($_SESSION['uyeid']); if($admn==1) {
 	$email=$_GET['mailxx'];
 	$sifrexx=$_GET['sifrex'];
 	 echo $email.' - '.$rumuz.' - '.$sifrexx;
-	$icmail='Sitemize kayıt olduğunuz için teşekkürler.
+	$icmail='Sitemize kayit oldugunuz icin tesekkurler.
 	<br />
 	<br />
-	K.adınız: '.$rumuz.'<br />
-	Şifreniz: '.$sifrexx.'<br />
+	K.adiniz: '.$rumuz.'<br />
+	Sifreniz: '.$sifrexx.'<br />
 	<br />
-	www.asuitiraf.com<br />
-	www.asuitiraf.net den giriş yapabilirsiniz. Bol itiraflar :)';
+	www.Aksarayitiraf.com<br />
+	www.Aksarayitiraf.net den giris yapabilirsiniz. Bol itiraflar :)';
 	
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
-$mail->Host = 'mail.asuitiraf.com';
+$mail->Host = 'mail.tekbilim.com';
 $mail->Port = 587;
-$mail->Username = 'info@asuitiraf.com';
-$mail->Password = '643216';
-$mail->SetFrom($mail->Username, 'ASÜ İTİRAF');
+$mail->Username = 'support@tekbilim.com';
+$mail->Password = 'su8465su';
+$mail->SetFrom($mail->Username, 'Aksaray iTiRAF');
 $mail->AddAddress($email, $rumuz);
 $mail->CharSet = 'UTF-8';
-$mail->Subject = 'ASÜ İTİRAF Üyelik Şifreniz';
+$mail->Subject = 'AKSARAY iTiRAF uyelik Sifreniz';
 $mail->MsgHTML($icmail);
 if($mail->Send()) {
     echo '<br />

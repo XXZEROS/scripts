@@ -1,13 +1,13 @@
-<?php
+﻿<?php
 #error_reporting(0);
 ini_set('session.gc_maxlifetime', 603600);
-$host="127.0.0.1";//varsayilan default
-$kullanici="asuiti_z";//Veritabani kullanici adi
-$sifre="643216";//veritabani kullanici adi �ifresi
-$veritabani="asuiti_z";//veritabani adi
+$host="localhost";//varsayilan default
+$kullanici="itirafak_ilyas";//Veritabani kullanici adi
+$sifre="il3939";//veritabani kullanici adi �ifresi
+$veritabani="itirafak_test";//veritabani adi
 $versiyon="v2.5";
 $defdil="tr"; // default dil ?
-$site="http://www.asuitiraf.net";
+$site="itiraf.aksarayitiraf.com/";
 //mysql a ba�laniyoruz ve veritabanimizi se�iyoruz
 $bag= mysql_connect($host,$kullanici,$sifre);
 $vbag=mysql_select_db("$veritabani", $bag);  

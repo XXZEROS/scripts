@@ -60,6 +60,6 @@ $kayitx = mysql_query($sqlx);
 	
 								}
 	$menuler2 = mysql_query ("select * from uye where id like '".$_SESSION['uyeid']."' and durum like '2' ");
-while ($uyet = mysql_fetch_array($menuler2))  {  echo '<meta http-equiv="refresh" content="1;url=http://www.asuitiraf.com/cikis.php"> ';}			
+while ($uyet = mysql_fetch_array($menuler2))  {  echo '<meta http-equiv="refresh" content="1;url=http://aksarayitiraf.tekbilim.com/cikis.php"> ';}			
 				
 ?><?=$ontop;?>

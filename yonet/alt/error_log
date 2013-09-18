@@ -1,2 +1,8 @@
 [12-Aug-2012 11:44:18 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/asuiti/public_html/yonet/alt/ayarlar.php on line 91
 [13-Sep-2012 16:33:24 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/asuiti/public_html/yonet/alt/ayarlar.php on line 91
+[20-Apr-2013 01:56:52 Europe/Istanbul] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ondblrwe/public_html/aksarayitiraf/yonet/alt/ayarlar.php on line 91
+[20-Apr-2013 11:00:25 Europe/Istanbul] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ondblrwe/public_html/aksarayitiraf/yonet/alt/ayarlar.php on line 91
+[22-Apr-2013 10:31:57 Europe/Istanbul] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ondblrwe/public_html/aksarayitiraf/yonet/alt/ayarlar.php on line 91
+[22-Apr-2013 22:58:10 Europe/Istanbul] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ondblrwe/public_html/aksarayitiraf/yonet/alt/ayarlar.php on line 91
+[25-Apr-2013 21:07:47 Europe/Istanbul] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ondblrwe/public_html/aksarayitiraf/yonet/alt/ayarlar.php on line 91
+[25-Apr-2013 21:07:51 Europe/Istanbul] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ondblrwe/public_html/aksarayitiraf/yonet/alt/ayarlar.php on line 91
