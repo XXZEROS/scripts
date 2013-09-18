@@ -1,6 +1,0 @@
-RewriteEngine On
-
-ReWriteRule ^modul/([_A-Za-z0-9-]+)/([_A-Za-z0-9-]+) index.php?d=$1&s=$2 [L,NC]
-
-
-ReWriteRule ^sitemap.xml sitemap.php

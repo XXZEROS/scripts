@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="UD_sayfalar" value="name:id;datatype:int,name:sayfaadi;datatype:string,name:icerik;datatype:blob,name:tarih;datatype:string,name:yazar;datatype:string,name:menugos;datatype:string,name:menuadi;datatype:string" />
-</info>

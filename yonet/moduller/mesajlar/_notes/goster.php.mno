@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="UD_rsiletimmesajlari" value="name:isim;datatype:int,name:mail;datatype:int,name:saat;datatype:int,name:konu;datatype:int,name:yazi;datatype:int,name:dkk;datatype:int,name:tarih;datatype:int,name:id;datatype:int" />
-</info>
